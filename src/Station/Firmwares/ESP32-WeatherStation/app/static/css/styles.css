@@ -1,0 +1,153 @@
+
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa a altura total da janela de visualização */
+    margin: 0;
+    background-color: #FFFFFF;
+    color: #333333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #006633;
+    color: #FFFFFF;
+    padding: 0px 20px;
+    height: 100px; /* Define uma altura mínima para o cabeçalho */
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: adiciona uma sombra */
+}
+
+.header-top {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    width: 100%;
+    
+}
+
+.header-top .logo {
+    height: 120px; /* Ajuste a altura conforme necessário, ex: 40px */
+    position: absolute; /* Remove o logo do fluxo normal do layout */
+    left: 20px; /* Posiciona a logo 20px à esquerda do contêiner do header */
+    clip-path: inset(0 74% 0 0);
+}
+
+.header-text {
+    margin-left: 80px; /* Ajuste o espaçamento para o texto começar após a logo */
+    flex-grow: 1;
+}
+
+.header-text h1 {
+    font-size: 24px;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+.header-text h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.header-text h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 5px;
+    line-height: 1.2;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: #007B45;
+    border-radius: 4px;
+}
+
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.data-fetch {
+    background-color: #F4F4F4;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.data-fetch label, .data-fetch input {
+    display: block;
+    margin-bottom: 10px;
+    width: 160px;
+}
+
+.data-fetch button {
+    background-color: #00A859;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.data-fetch button:hover {
+    background-color: #007B45;
+}
+
+#jsonData {
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+}
+
+.charts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espaço entre as divs dos gráficos */
+}
+
+.chart-container {
+    width: calc(50% - 20px); /* Cada gráfico ocupa 50% da largura, menos o espaço */
+    min-width: 300px; /* Largura mínima para garantir que os gráficos não encolham muito */
+}
+
+canvas {
+    width: 100%;
+    height: 300px; /* Altura fixa para os gráficos */
+}
+
+footer {
+    background-color: #006633;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}

@@ -1,0 +1,7 @@
+scipy
+requests
+pandas
+openpyxl
+python-dotenv
+scikit-learn
+matplotlib

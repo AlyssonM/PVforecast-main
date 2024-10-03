@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/styles.css"> <!-- Link para o CSS externo -->
+    <title>Sensor Data Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <img src="https://sigeventos.ifes.edu.br/sigeventos/img/ifes-horizontal-cor.png" alt="Logo IFES" class="logo">
+            <div class="header-text">
+                <h1>Instituto Federal</h1>
+                <h2>Espírito Santo</h2>
+                <h3>Campus Linhares</h3>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="https://github.com/seu-usuario/seu-repositorio" target="_blank">Github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="data-fetch">
+            <h2>Estação Metereológica (ESP32-WeatherStation)</h2>
+            <!-- Interface para entrada das datas -->
+            <label for="startDate">Data Inicial:</label>
+            <input type="text" id="startDate" placeholder="YYYY-MM-DD HH:MM:SS" />
+
+            <label for="endDate">Data Final:</label>
+            <input type="text" id="endDate" placeholder="YYYY-MM-DD HH:MM:SS" />
+
+            <button onclick="fetchData()">Obter dados</button>
+        </section>
+
+        <!-- Container para os gráficos -->
+        <div id="chartsContainer" class="charts-wrapper"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Campus Linhares - Todos os direitos reservados</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0"></script>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
